@@ -32,9 +32,9 @@ function renderComponent() {
 
 <div>
   <Layout>
-    {#await renderComponent() then Component}
+    <!-- {#await renderComponent() then Component}
       <svelte:component this={Component} />
-    {/await}
+    {/await} -->
   </Layout>
 </div>
 

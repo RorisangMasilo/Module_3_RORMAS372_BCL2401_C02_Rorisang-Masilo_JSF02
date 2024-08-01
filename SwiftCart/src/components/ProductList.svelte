@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import ProductCard from "./ProductCard.svelte";
     import CardSkeleton from "./CardSkeleton.svelte";
     import { useProductStore } from "../../store/productStore";
@@ -39,4 +39,4 @@
       {/each}
     </div>
   </div>
-{/if}
+{/if} -->

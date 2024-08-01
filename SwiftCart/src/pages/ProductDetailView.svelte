@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     export let id;
     export let title;
     export let description;
@@ -44,4 +44,4 @@
 <h2 class="text-lg font-bold">Description</h2>
 <p>{description}</p>
 </div>
-</div>
+</div> -->
