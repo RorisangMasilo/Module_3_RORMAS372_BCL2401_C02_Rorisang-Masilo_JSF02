@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import ProductCard from './ProductCard.svelte';
-  import { getContext } from 'svelte';
+  // import { getContext } from 'svelte';
 
   export let filters;
   export let updateFilters;
