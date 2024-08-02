@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   export let products = [];
   export let loading = true;
   export let selectedCategory = "";
@@ -105,4 +105,4 @@
       </div>
     {/each}
   </div>
-{/if}
+{/if} -->
