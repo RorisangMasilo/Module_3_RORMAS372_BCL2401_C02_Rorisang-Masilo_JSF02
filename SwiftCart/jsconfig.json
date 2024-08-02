@@ -4,6 +4,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "typeRoots": ["./node_modules/@types", "./node_modules/svelte-routing"],
+    "types": ["svelte"],
     /**
      * svelte-preprocess cannot figure out whether you have
      * a value or a type, so tell TypeScript to enforce using

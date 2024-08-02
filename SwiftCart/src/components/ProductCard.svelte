@@ -1,57 +1,50 @@
 <script>
-    export let product;
+  export let product;
   </script>
   
-  <div class="product-card">
-    <img src={product.image} alt={product.title} class="product-image" />
-    <h2 class="product-title">{product.title}</h2>
-    <p class="product-price">${product.price}</p>
-    <p>Category: {product.category}</p>
-    <a href={`/products/${product.id}`}>View Details</a>
-    <button class="add-to-cart">Add to Cart</button>
+  <div class="card">
+      <img src="{product.image}" alt="productimage" class="product-image" >
+      <h2>{product.title}</h2>
+      <h2>${product.price}</h2>
+      <h2>{product.category}</h2>
   </div>
   
+  
   <style>
-    .product-card {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 1rem;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
-    }
-  
-    .product-card:hover {
-      transform: scale(1.05);
-    }
-  
-    .product-image {
-      width: 100%;
-      height: auto;
-      border-radius: 8px 8px 0 0;
-    }
-  
-    .product-title {
-      font-size: 1.2rem;
-      margin: 0.5rem 0;
-    }
-  
-    .product-price {
-      color: #2c3e50;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-  
-    .add-to-cart {
-      background-color: #3498db;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 0.5rem 1rem;
+    
+  .card{
+      aspect-ratio: 1;
+      position: relative;
+      top: 50%;
+      font-size: small;
+      text-align: center;
+      color: rgb(101, 94, 94);
+      text-decoration-style: none;
+      margin-top: 20px;
+      padding: 20px;
+      border:  rgb(33, 32, 32);
+      border-radius: 10%;
+      background-color: rgb(252, 251, 251);
       cursor: pointer;
-    }
+      width: 300px;
+     
+  }
   
-    .add-to-cart:hover {
-      background-color: #2980b9;
-    }
+  .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-image{
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: 65%;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    
+  }
+  
+  
   </style>
+      

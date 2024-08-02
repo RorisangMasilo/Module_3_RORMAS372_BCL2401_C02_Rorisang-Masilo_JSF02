@@ -1,43 +1,33 @@
 <script>
-  import Header from "./components/Header.svelte";
-  import ProductList from "./components/ProductList.svelte";
-  import ProductDetail from "./components/ProductDetail.svelte";
-  import { writable } from 'svelte/store';
+  // @ts-ignore
+  // @ts-ignore
   import { Router, Route } from 'svelte-routing';
+  import Header from './components/Header.svelte';
+  import ProductList from './components/ProductList.svelte';
+  import ProductDetail from './components/ProductDetail.svelte';
+  import { onMount } from 'svelte';
 
-  // State management for filters and sorting
-  export let filters = writable({
-    category: 'All categories',
-    searchTerm: '',
-    sorting: 'default'
+  let products = []; // Assume you have a way to fetch and pass products to ProductList
+
+  // Fetch products (for demonstration purposes)
+  const fetchProducts = async () => {
+    const res = await fetch('https://fakestoreapi.com/products');
+    products = await res.json();
+  };
+
+  onMount(() => {
+    fetchProducts();
   });
-
-  const updateFilters = (newFilters) => {
-    filters.update(current => ({ ...current, ...newFilters }));
-  };
-
-  let isMenuOpen = false;
-
-  const toggleMenu = () => {
-    isMenuOpen = !isMenuOpen;
-  };
 </script>
 
-<Header {isMenuOpen} {toggleMenu} />
-
 <Router>
-  <Route path="/">
-    <ProductList {filters} {updateFilters} />
-  </Route>
-  <Route path="/products/:id" let:params>
-    <ProductDetail {params} />
-  </Route>
+  <Header />
+  <div class="container">
+    <Route path="/" let:params>
+      <ProductList {products} />
+    </Route>
+    <Route path="/product/:id" let:params>
+      <ProductDetail {params} />
+    </Route>
+  </div>
 </Router>
-
-<style>
-  main {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-</style>
