@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import { onMount } from "svelte";
     import Ratings from "../Ratings.svelte";
     export let id, title, image, price, rating, category;
@@ -72,4 +72,4 @@
         </button>
       </div>
     </div>
-</div>
+</div> -->
