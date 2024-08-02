@@ -1,6 +1,4 @@
 <script>
-  // @ts-ignore
-  // @ts-ignore
   import { Router, Route } from 'svelte-routing';
   import Header from './components/Header.svelte';
   import ProductList from './components/ProductList.svelte';
