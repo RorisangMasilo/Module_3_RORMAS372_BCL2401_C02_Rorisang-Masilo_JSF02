@@ -1,10 +1,10 @@
 # Module_3_RORMAS372_BCL2401_C02_Rorisang-Masilo_JSF02
 
-## Svelte E-store
+## Svelte E-commerce site
 
 ### Introduction
 
-Welcome to the Alpine E-store! This project is a web application designed to showcase products in a user-friendly manner. It features a detailed view modal to display comprehensive product information, including product images, ratings, and descriptions.
+Welcome to the Svelte E-commerce site! This project is a web application designed to showcase products in a user-friendly manner. It features a detailed view modal to display comprehensive product information, including product images, ratings, and descriptions.
 
 ### Technologies Used
 
